@@ -2,40 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lovie</title>
+    <title>Newsie</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body onload="recentSearches();">
     <!-- partial:index.partial.html -->
-    <nav class="navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand">Love calculator</a>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div id="result" class="result"></div>
-
-      <div class="offset-md-3 col-sm-12 col-md-6 offset-md-3">
-        <div class="mb-6">
-          <label for="bname" class="form-label">Bride Name</label>
-          <input type="text" class="form-control" id="bname" />
-        </div>
-        <div class="mb-6">
-          <label for="gname" class="form-label">Groom Name</label>
-          <input type="text" class="form-control" id="gname" />
-        </div>
-        <div id="error" class="error"></div>
-        <div class="d-grid gap-2 calculate">
-          <button type="button" onclick="calculate();" class="btn btn-danger">
-            Calculate
+        <a class="navbar-brand">Newsie</a>
+        <div class="d-flex">
+          <img src="./searching.svg" id="loading" width="38px" height="38px" />
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="q"
+          />
+          <button class="btn btn-outline-light" onclick="search();">
+            Search
           </button>
         </div>
       </div>
+    </nav>
+    <div class="container">
+      <div id="recent" class="recent"></div>
+      <div id="error" class="error"></div>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2"
+        id="news"
+      ></div>
     </div>
     <script src="./script.js"></script>
   </body>
