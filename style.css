@@ -1,59 +1,13 @@
-body {
-  background: #fb0;
+.calculate {
+  margin-top: 10px;
 }
 
 .error {
-  font-weight: 500;
-  color: crimson;
-}
-.beer__mug {
-  color: #fb0;
-}
-.beer__type {
-  color: #994d00;
-}
-.fnav {
-  border-radius: 25px;
-}
-.nav__bg {
-  background-color: #fee140;
-  background-image: linear-gradient(315deg, #fee140 69%, #fa709a 100%);
-}
-.card__links {
-  text-decoration: none;
-  color: #4a3e3e;
-  transition: 0.2s all;
-}
-.card__links:hover {
-  transform: scale(2);
-}
-.filter__container {
-  margin-top: 3px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 3px;
-}
-.brew__card {
-  height: 85%;
-  border-radius: 20px;
-  transition: 0.2s all;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.brew__card:hover {
-  transform: scale(1.05);
-}
-
-.locate {
-  color: green;
-}
-
-.website {
-  color: #0066ff;
-}
-
-.phone {
   color: blueviolet;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.result {
+  margin: 10px;
 }
