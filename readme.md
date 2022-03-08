@@ -1,10 +1,12 @@
-## Lovie
+## Brewify
 
 #### About
 
-- Love calculator using love calculator public api
-- Due to CORS error I signed up in rapidapi and got the api key's
+A breweries app which displays the details of the breweries.
 
 #### What it does?
 
-- On entering the name of bride and groom, it displays percentage and suggestion whether to move with the pair or not
+- Realtime search - You can search the breweries
+- Realtime filter - You can filter the breweries with state and type.
+- Locate brewery - On clicking the locate icon, a new tab with location on google map is opened.
+- Error message - Appropriate error message is displayed for search and API call.

@@ -2,40 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lovie</title>
+    <title>Brewify</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body onload="init();">
     <!-- partial:index.partial.html -->
-    <nav class="navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-warning bg-warning">
       <div class="container-fluid">
-        <a class="navbar-brand">Love calculator</a>
+        <a class="navbar-brand text-dark lead" href="#"
+          ><strong><i class="fas fa-beer"></i>&nbsp;Brewify</strong></a
+        >
+
+        <div class="d-flex" id="navbar__menu">
+          <input
+            class="form-control me-2"
+            id="search"
+            oninput="searchBrew();"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <select
+            class="form-select me-2"
+            id="typeFilter"
+            onchange="filter('type');"
+            aria-label="filter by state"
+          ></select>
+          <select
+            class="form-select"
+            id="stateFilter"
+            onchange="filter('state');"
+            aria-label="filter by state"
+          ></select>
+        </div>
       </div>
     </nav>
 
     <div class="container">
-      <div id="result" class="result"></div>
-
-      <div class="offset-md-3 col-sm-12 col-md-6 offset-md-3">
-        <div class="mb-6">
-          <label for="bname" class="form-label">Bride Name</label>
-          <input type="text" class="form-control" id="bname" />
-        </div>
-        <div class="mb-6">
-          <label for="gname" class="form-label">Groom Name</label>
-          <input type="text" class="form-control" id="gname" />
-        </div>
-        <div id="error" class="error"></div>
-        <div class="d-grid gap-2 calculate">
-          <button type="button" onclick="calculate();" class="btn btn-danger">
-            Calculate
-          </button>
-        </div>
-      </div>
+      <div id="error" class="error"></div>
+      <div id="container"></div>
     </div>
     <script src="./script.js"></script>
   </body>
