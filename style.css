@@ -1,13 +1,44 @@
-.calculate {
-  margin-top: 10px;
+body {
+  background: rgb(228, 232, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(228, 232, 233, 1) 0%,
+    rgba(228, 232, 233, 1) 75%,
+    rgba(228, 232, 233, 1) 91%,
+    rgba(228, 232, 233, 1) 95%
+  );
 }
 
+.recent {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 .error {
-  color: blueviolet;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  color: crimson;
 }
 
-.result {
-  margin: 10px;
+.news__card {
+  transition: 0.4s all;
+}
+.news__card:hover {
+  transform: scale(1.1);
+}
+
+.chip {
+  border: none;
+  margin: 2px;
+  transition: 0.2s all;
+}
+.chip:hover {
+  border: none;
+  background-color: aquamarine;
+  transform: scale(1.2);
+}
+
+.not__loading {
+  visibility: hidden;
+}
+
+.is__loading {
+  visibility: visible;
 }
